@@ -1,33 +1,3 @@
-/** CSS STYLE **/
-/**
-
-Основные параметры лендинга
-Цвета
-Белый: #fff
-Полупрозрачный белый: #d7ccc0
-Светлый: #f5f4f0
-Основной: #fe8a02
-Основной тёмный: #42413c
-Тёмный: #2a2626
-Полупрозрачный тёмный: #908d8b
-Коричневый: #b09a81
-Синий: #1085c5
-Шрифты
-В качестве основного шрифта используется Open Sans
-Для заголовков используется шрифт Neucha
-Размер шрифта: 16px
-Межстрочный интервал: 1.6em
-Цвет шрифта: #2A2626
-Заголовки
-Межстрочный интервал заголовков: 1.2em
-Размер заголовка первого уровня: 72px
-Размер заголовка второго уровня: 60px
-Размер заголовка третьего уровня: 34px
-Секции
-Ограничение по ширине контента: 1110px
-Выравнивание по центру
-Отступы по 100 пикселей сверху и снизу
-**/
 :root {
   --brand-white: #fff;
   --brand-translucentwhite: #d7ccc0;
@@ -38,6 +8,42 @@
   --brand-translucentdark: #908d8b;
   --brand-brown:#b09a81;
   --brand-blue: #1085c5;
+  --font-main-size: 16px;
+  --line-height: 1.6em;
+  --font-color:#2A2626;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans.ttf");
+}
+
+@font-face {
+  font-family: Neucha;
+  src: url("../fonts/Neucha.ttf");
+}
+
+h1, h2, h3, {
+  font-family: Neucha, sans-serif;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 34px;
+}
+
+section {
+  display: block;
+  max-width: 1110px;
+  margin: 100px auto;
 }
 
 .hello {
