@@ -80,7 +80,7 @@ header, main {
   position: relative;
 }
 
-.header-content, .video-content, .navigation-content {
+.header-content, .video-content, .navigation-content, .ikea-content, .optimize-content, .distoration-content, .depreciation-content, .planning-content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -88,6 +88,7 @@ header, main {
   max-width: 1110px;
   padding: 100px 0;
   margin: 0 auto;
+  z-index: 10;
 }
 
 .navigation-content {
@@ -104,7 +105,7 @@ header, main {
   margin-bottom: 29px;
 }
 
-header::before {
+header::before, .ikea-section::before, .optimize-section::before, .distoration-section::before, .depreciation-section::before, .planning-section::before {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -129,16 +130,21 @@ header::before {
   right: -270px;
 }
 
-.two-column {
-  display: flex;
-  gap: 30px;
+.text-column, .text-column-opt {
+  column-count: 2;
+  column-gap: 30px;
 }
 
 .text-block {
-  width: 50%;  
+  break-after: column;
+  break-inside: avoid-column;
 }
 
-.text-block p {
+.text-plan {
+  margin-bottom: 16px;
+}
+
+.header-content .text-block p {
   margin-top: 13px;
 }
 
@@ -165,6 +171,17 @@ header::before {
 
 .navigation {
   background-color: var(--maindark);
+  width: 100%;
+}
+
+.ikea-section, .distoration-section, .planning-section {
+  position: relative;
+  width: 100%;
+}
+
+.optimize-section, .depreciation-section {
+  position: relative;
+  background-color: var(--brown);
   width: 100%;
 }
 
@@ -227,4 +244,94 @@ header::before {
 .card:hover * {
   background-color: var(--orange);
   color: var(--white);
+}
+
+.text-how {
+  display: inline-block;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.ikea, .distor, .plan {
+  color: var(--white);
+  background-color: var(--brown);
+}
+
+.opt, .depre {
+  color: var(--brown);
+  background-color: var(--white);
+}
+
+.flex-column {
+  display: flex;
+}
+
+.img-block {
+  vertical-align: middle;
+}
+
+.ikea-img, .distor-img, .plan-img {
+  display: block;
+  margin-right: 30px;
+  box-shadow: 0 16px 32px rgba(0 0 0 / 15%);
+}
+
+.opt-img, .depre-img {
+  display: block;
+  margin-left: 30px;
+  box-shadow: 0 16px 32px rgba(0 0 0 / 15%);
+}
+
+.up-title {
+  color: var(--trans-dark);
+  font-size: 24px;
+  font-family: "Neucha", sans-serif;
+  line-height: 1.2em;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.middle-title {
+  margin-bottom: 30px;
+}
+
+.down-title {
+  font-family: "Neucha", sans-serif;
+  line-height: 1.2em;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 34px;
+}
+
+.optimize-content .up-title, .depreciation-content .up-title {
+  color: var(--trans-white);
+}
+
+.optimize-content .middle-title, .depreciation-content .middle-title {
+  color: var(--white);
+}
+
+.optimize-content .down-title, .depreciation-content .down-title {
+  color: var(--white);
+}
+
+.text-white {
+  color: var(--white) !important;
+}
+
+/* костыль для проверки с подставным блоком */
+.text-column-opt + div h2 {
+  color: var(--orange);
+}
+
+.text-column-opt + div ul {
+  padding-left: 40px;
+  padding-bottom: 16px;
 }
