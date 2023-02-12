@@ -33,7 +33,7 @@
 
 @font-face {
   font-weight: 400;
-  font-family: "Neucha";
+  font-family: Neucha;
   src: url("../fonts/Neucha-Regular.ttf");
 }
 
@@ -57,11 +57,9 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Neucha", sans-serif;
+  font-family: Neucha, sans-serif;
   line-height: 1.2em;
   font-weight: normal;
-  margin-top: 0px;
-  margin-bottom: 0px;
   z-index: 1;
 }
 
@@ -124,8 +122,6 @@ header::before,
 .depreciation-section::before,
 .planning-section::before {
   position: absolute;
-  top: 0px;
-  left: 0px;
   content: "";
   background-image: url("../images/background.png");
   background-repeat: no-repeat;
@@ -160,6 +156,10 @@ header::before,
 
 .text-plan {
   margin-bottom: 16px;
+}
+
+.card p {
+  color: var(--dark);
 }
 
 .header-content .text-block p {
@@ -246,7 +246,6 @@ header::before,
   background-color: var(--maindark) !important;
   flex-grow: 1;
   flex-basis: 350px;
-  background-color: var(--light);
   margin-right: 30px;
   margin-bottom: 20px;
 }
@@ -284,10 +283,6 @@ header::before,
 .card h3 {
   color: var(--orange);
   margin-bottom: 16px;
-}
-
-.card p {
-  color: var(--dark);
 }
 
 .card:hover * {
@@ -345,11 +340,9 @@ header::before,
 .up-title {
   color: var(--trans-dark);
   font-size: 24px;
-  font-family: "Neucha", sans-serif;
+  font-family: Neucha, sans-serif;
   line-height: 1.2em;
   font-weight: normal;
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 
 .middle-title {
@@ -357,11 +350,9 @@ header::before,
 }
 
 .down-title {
-  font-family: "Neucha", sans-serif;
+  font-family: Neucha, sans-serif;
   line-height: 1.2em;
   font-weight: normal;
-  margin-top: 0px;
-  margin-bottom: 0px;
   font-size: 34px;
 }
 
@@ -445,7 +436,7 @@ header::before,
   content: "";
   height: 100%;
   width: 100%;
-  background-image: url(../images/send.svg);
+  background-image: url("../images/send.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
