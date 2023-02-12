@@ -77,8 +77,7 @@ h3 {
   font-size: 34px;
 }
 
-header,
-main {
+header {
   position: relative;
 }
 
@@ -94,25 +93,28 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   max-width: 1110px;
   padding: 100px 0;
   margin: 0 auto;
   z-index: 10;
 }
 
-.navigation-content {
-  padding-top: 200px;
+.navigation-menu {
+  margin-top: 100px;
+  margin-bottom: -20px;
 }
 
 .video-content {
-  align-items: center;
-  text-align: center;
+  margin-bottom: -190px;
+  padding-bottom: 90px !important;
 }
 
-.video-content p {
-  margin-top: 28px;
-  margin-bottom: 29px;
+.video-head {
+  margin-bottom: 30px;
+}
+
+.video-title {
+  margin-bottom: 30px;
 }
 
 header::before,
@@ -184,13 +186,28 @@ header::before,
 }
 
 .video-section {
+  position: relative;
+  text-align: center;
   background-color: var(--white);
   width: 100%;
+  z-index: 10;
 }
 
 .navigation {
+  position: relative;
   background-color: var(--maindark);
   width: 100%;
+}
+
+.navigation::before {
+  content: "";
+  background: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
 }
 
 .ikea-section,
@@ -215,7 +232,6 @@ header::before,
 
 .video {
   filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
-  margin-bottom: -190px;
 }
 
 .cards-plate {
@@ -223,16 +239,16 @@ header::before,
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 30px;
-  row-gap: 20px;
 }
 
 .describing {
   color: var(--white);
   background-color: var(--maindark) !important;
-  flex-grow: 0;
+  flex-grow: 1;
   flex-basis: 350px;
   background-color: var(--light);
+  margin-right: 30px;
+  margin-bottom: 20px;
 }
 
 .describing h2 {
@@ -240,9 +256,15 @@ header::before,
 }
 
 .card {
-  flex-grow: 0;
+  flex-grow: 1;
   flex-basis: 350px;
   background-color: var(--light);
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.card:nth-child(3n) {
+  margin-right: 0;
 }
 
 .card-link {
